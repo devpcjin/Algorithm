@@ -4,7 +4,6 @@ class Solution {
     public int solution(int bridge_length, int weight, int[] truck_weights) {
         int answer = 0;
         int totalWeight = 0;
-        int time = 0;
         int passedTruck = 0;
         
         Queue<Integer> queue = new LinkedList<>();
@@ -20,7 +19,7 @@ class Solution {
                     queue.add(list.get(0));
                     totalWeight += list.get(0);
                     list.remove(0);
-                    time++;
+                    answer++;
                 } else if(queue.size() == bridge_length) {
                     int out = queue.poll();
                     totalWeight -= out;
@@ -32,10 +31,10 @@ class Solution {
                         queue.add(list.get(0));
                         totalWeight += list.get(0);
                         list.remove(0);
-                        time++;
+                        answer++;
                     } else {
                         queue.add(0);
-                        time++;
+                        answer++;
                     }
                 }
             } else {
@@ -45,12 +44,12 @@ class Solution {
                     }
                 } else {
                     queue.add(0);
-                    time++;
+                    answer++;
                 }
             }
         }
         
-        answer = time + 1;
+        answer++;
         
         return answer;
         
