@@ -1,3 +1,3 @@
 class Solution {
-    fun solution(strArr: Array<String>): Array<String> = strArr.filter { !("ad" in it)}.toTypedArray()
+    fun solution(strArr: Array<String>): Array<String> = strArr.filterNot { "ad" in it }.toTypedArray()
 }
