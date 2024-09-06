@@ -3,7 +3,7 @@ class Solution {
         var stk: IntArray = intArrayOf()
         var index: Int = 0;
         
-        while(index != arr.size) {
+        while(index < arr.size) {
             
             if(stk.isEmpty() || stk.last() < arr[index]) {
                 stk += arr[index]
