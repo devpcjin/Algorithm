@@ -9,7 +9,7 @@ class Solution {
         var top:Int = 0
         var bottom:Int = n-1
         
-        while(left <= right && top <= bottom) {
+        while(number <= n*n) {
             
             for(i in left..right) {
                 answer[top][i] = number
